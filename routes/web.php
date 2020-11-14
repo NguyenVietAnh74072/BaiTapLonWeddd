@@ -28,33 +28,17 @@ Route::get('name/{name?}', function ($name = 'jhoin') { //name? khong nhap thi r
 ////////////////////////////////////////////////////////////////////////////
 $prefixAdmin = config('zvn.pre_admin'); // khai bao config    config('Tenfile.TenKhaibao')
 Route::group(['prefix' => $prefixAdmin], function () { //nhom group
-    Route::get('user', function () {
-        return 'helo';
+    
+    $prefix= 'slider';
+    Route::group(['prefix' => $prefix], function () use($prefix){
+
+       $prefixcontroller ='Slidercontroller@';
+        Route::get('/',                  [   'as'=>'slider'         ,  'uses'=>$prefixcontroller.'index' ]);
+        Route::get('from',               [   'as'=>$prefix.'/from'  ,  'uses'=> $prefixcontroller.'from' ]);
+        Route::get('from/{id}',          [   'as'=>$prefix.'/from'  ,  'uses'=>$prefixcontroller.'from'  ]);
+        Route::get('delete/{id}',        [   'as'=>$prefix.'/delete',  'uses'=>$prefixcontroller.'delete']);
+        Route::get('status-status/{id}', [   'as'=>$prefix.'/status',  'uses'=>$prefixcontroller.'status']);
+            
     });
     
-    Route::group(['prefix' => 'slider'], function () {
-
-        Route::get('/', function () {
-            return 'slider home123';
-        });
-        Route::get('123', 'SliderController@index');
-        Route::get('111', 'SliderController@from');
-        Route::get('222', 'SliderController@delete');
-        Route::get('edit/{id}', function ($id) {
-            return 'edit' . $id;
-        });
-        Route::get('delete/{id}', function ($id) {
-            return 'delete' . $id;
-        })->where('id', '[1-9]+');
-    });
-    Route::get('admin', function () {
-        return 'admin';
-    });
-    Route::get('catalog', function () {
-        return 'catalog';
-    });
-    Route::group(['prefix' => 'admin'], function () {
-        return 'catalog';
-        return 'admin';
-    });
 });

@@ -1,2 +1,9 @@
 <?php
-echo '<h3 style = "color:red">ID :'.$id.'</h3>';
+  $linklist =route($controllerName);
+
+
+
+  echo'<h3 style="color :red' .$linklist.'</h3>';
+
+
+?>
