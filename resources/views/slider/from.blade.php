@@ -1,1 +1,3 @@
-<h1>day la from</h1>
+<?php
+
+echo '<h3 style="color :red">'.$id.'</h3>';

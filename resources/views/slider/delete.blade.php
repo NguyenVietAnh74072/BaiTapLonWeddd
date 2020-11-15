@@ -1,1 +1,3 @@
-<h4>day la delete</h4>
+<?php
+
+echo '<h3 style="color :red">'.$id.'</h3>';

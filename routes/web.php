@@ -14,9 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 /////////////////////////////////////////////////////////////////////////////////
 /*Route::get('name/{id}', function ($id) {
@@ -29,15 +27,16 @@ Route::get('name/{name?}', function ($name = 'jhoin') { //name? khong nhap thi r
 $prefixAdmin = config('zvn.pre_admin'); // khai bao config    config('Tenfile.TenKhaibao')
 Route::group(['prefix' => $prefixAdmin], function () { //nhom group
     
+   
     $prefix= 'slider';
     Route::group(['prefix' => $prefix], function () use($prefix){
 
        $prefixcontroller ='Slidercontroller@';
         Route::get('/',                  [   'as'=>'slider'         ,  'uses'=>$prefixcontroller.'index' ]);
         Route::get('from',               [   'as'=>$prefix.'/from'  ,  'uses'=> $prefixcontroller.'from' ]);
-        Route::get('from/{id}',          [   'as'=>$prefix.'/from'  ,  'uses'=>$prefixcontroller.'from'  ]);
+        Route::get('from/{id}',          [   'as'=>$prefix.'/from123'  ,  'uses'=>$prefixcontroller.'from'  ]);
         Route::get('delete/{id}',        [   'as'=>$prefix.'/delete',  'uses'=>$prefixcontroller.'delete']);
-        Route::get('status-status/{id}', [   'as'=>$prefix.'/status',  'uses'=>$prefixcontroller.'status']);
+        Route::get('status-{status}/{id}', [   'as'=>$prefix.'/status',  'uses'=>$prefixcontroller.'status']);
             
     });
     

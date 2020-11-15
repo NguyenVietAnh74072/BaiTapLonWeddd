@@ -21,9 +21,7 @@ class SliderController extends Controller
 
     {
        
-        return view($this->link . 'index', [
-          
-        ]);
+        return view($this->link . 'index');
     }
     public function from($id=null)
     {
