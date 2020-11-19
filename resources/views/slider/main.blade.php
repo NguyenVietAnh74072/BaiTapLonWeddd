@@ -11,27 +11,27 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <script src="js/jquery.min.js"></script>
+    <link href="{{ asset('website/admin/css/style.css') }}" rel="stylesheet" type="text/css" media="all" />
+    <script src="{{ asset('website/admin/js/jquery.min.js') }}"></script>
     <!--start slider -->
-    <link rel="stylesheet" href="css/fwslider.css" media="all">
-    <script src="js/jquery-ui.min.js"></script>
-    <script src="js/css3-mediaqueries.js"></script>
-    <script src="js/fwslider.js"></script>
+    <link rel="stylesheet" href="{{ asset('website/admin/css/fwslider.css') }}" media="all">
+    <script src="{{ asset('website/admin/js/jquery-ui.min.js') }}"></script>
+    <script src="{{ asset('website/admin/js/css3-mediaqueries.js') }}"></script>
+    <script src="{{ asset('website/admin/js/fwslider.js') }}"></script>
     <!--end slider -->
     <!---strat-date-piker---->
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <script src="js/jquery-ui.js"></script>
+    <link rel="stylesheet" href="{{ asset('website/admin/css/jquery-ui.css') }}" />
+    <script src="{{ asset('website/admin/js/jquery-ui.js') }}"></script>
               <script>
                       $(function() {
                         $( "#datepicker,#datepicker1" ).datepicker();
                       });
               </script>
     <!---/End-date-piker---->
-    <link type="text/css" rel="stylesheet" href="css/JFGrid.css" />
-    <link type="text/css" rel="stylesheet" href="css/JFFormStyle-1.css" />
-            <script type="text/javascript" src="js/JFCore.js"></script>
-            <script type="text/javascript" src="js/JFForms.js"></script>
+    <link type="text/css" rel="stylesheet" href="{{ asset('website/admin/css/JFGrid.css') }}" />
+    <link type="text/css" rel="stylesheet" href="{{ asset('website/admin/css/JFFormStyle-1.css') }}" />
+            <script type="text/javascript" src="{{ asset('website/admin/js/JFCore.js') }}"></script>
+            <script type="text/javascript" src="{{ asset('website/adminjs/JFForms.js') }}"></script>
             <!-- Set here the key for your domain in order to hide the watermark on the web server -->
             <script type="text/javascript">
                 (function() {
@@ -67,7 +67,7 @@
     <div class="wrap">
         <div class="header">
             <div class="logo">
-                <a href="index.html"><img src="images/logo.png" alt=""></a>
+                <a href="{{ asset('website/admin/index.html')}}"><img src="{{ asset('website/adminimages/logo.png')}}" alt=""></a>
             </div>
             <div class="h_right">
                 <!--start menu -->
@@ -117,7 +117,7 @@
                     <div class="slider_container">
                         <div class="slide"> 
                             <!-- Slide image -->
-                                <img src="images/slider-bg.jpg" alt=""/>
+                                <img src="{{ asset('website/admin/images/pic10.jpg')}}" alt=""/>
                             <!-- /Slide image -->
                             <!-- Texts container -->
                             <div class="slide_content">
@@ -220,7 +220,7 @@
             <div class="grid1_of_3">
                 <div class="grid1_of_3_img">
                     <a href="details.html">
-                        <img src="images/pic2.jpg" alt="" />
+                        <img src="{{asset('website/admin/images/pic2.jpg')}}" alt="" />
                         <span class="next"> </span>
                     </a>
                 </div>
@@ -230,7 +230,7 @@
             <div class="grid1_of_3">
                 <div class="grid1_of_3_img">
                     <a href="details.html">
-                        <img src="images/pic1.jpg" alt="" />
+                        <img src="{{asset('website/admin/images/pic1.jpg')}}" alt="" />
                         <span class="next"> </span>
                     </a>
                 </div>
@@ -240,7 +240,7 @@
             <div class="grid1_of_3">
                 <div class="grid1_of_3_img">
                     <a href="details.html">
-                        <img src="images/pic3.jpg" alt="" />
+                        <img src="{{asset('website/admin/images/pic3.jpg')}}" alt="" />
                         <span class="next"> </span>
                     </a>
                 </div>
